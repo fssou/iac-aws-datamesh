@@ -10,7 +10,7 @@ env:
   AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
   AWS_ROLE_ARN: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/github/repo-${{ github.repository_id }}
   AWS_REGION: ${{ secrets.AWS_REGION }}
-  AWS_ROLE_SESSION_NAME: GitHubActions_${{ github.repository_id }}
+  AWS_ROLE_SESSION_NAME: GitHubActions
   TF_STATE_BUCKET_NAME: ${{ secrets.TF_STATE_BUCKET_NAME }}
 
 jobs:
