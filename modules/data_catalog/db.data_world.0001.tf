@@ -40,7 +40,7 @@ resource "aws_glue_catalog_table" "tb_covid_19_data_resource_hub_covid_19_case_c
     columns {
       name    = "people_positive_cases_count"
       type    = "bigint"
-      comment = "Number of people who tested positive for COVID-19. This number is not representative of the number of people who have been infected, as many people have not been tested. This number also does not account for people who have recovered or died from COVID-19."
+      comment = "Number of people who tested positive for COVID-19."
     }
     columns {
       name    = "county_name"
@@ -70,7 +70,7 @@ resource "aws_glue_catalog_table" "tb_covid_19_data_resource_hub_covid_19_case_c
     columns {
       name    = "people_death_new_count"
       type    = "bigint"
-      comment = "Number of people who died from COVID-19 on the date of the report. This number is not representative of the number of people who have died from COVID-19, as many people have not been tested. This number also does not account for people who have recovered or died from COVID-19."
+      comment = "Number of people who died from COVID-19 on the date of the report. "
     }
     columns {
       name    = "county_fips_number"
@@ -95,12 +95,12 @@ resource "aws_glue_catalog_table" "tb_covid_19_data_resource_hub_covid_19_case_c
     columns {
       name    = "people_positive_new_cases_count"
       type    = "bigint"
-      comment = "Number of new people who tested positive for COVID-19 on the date of the report. This number is not representative of the number of people who have been infected, as many people have not been tested. This number also does not account for people who have recovered or died from COVID-19."
+      comment = "Number of new people who tested positive for COVID-19 on the date of the report."
     }
     columns {
       name    = "people_death_count"
       type    = "bigint"
-      comment = "Number of people who died from COVID-19. This number is not representative of the number of people who have died from COVID-19, as many people have not been tested. This number also does not account for people who have recovered or died from COVID-19."
+      comment = "Number of people who died from COVID-19."
     }
   }
 }
