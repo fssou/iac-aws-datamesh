@@ -15,16 +15,19 @@ resource "aws_glue_catalog_table" "tb_covid_19_data_resource_hub_covid_19_case_c
     "parquet.compression" = "snappy"
   }
   partition_keys {
-    name = "report_date"
+    name = "part_report_date"
     type = "date"
+    comment = "Partition of column report_date"
   }
   partition_keys {
-    name = "country_alpha_2_code"
+    name = "part_country_alpha_2_code"
     type = "string"
+    comment = "Partition of column country_alpha_2_code"
   }
   partition_keys {
-    name = "continent_name"
+    name = "part_continent_name"
     type = "string"
+    comment = "Partition of column continent_name"
   }
   storage_descriptor {
     location      = "s3://${var.bucket_name_sor}/${local.data_world_0001_db_name}/${local.data_world_0001_tb_name}"
