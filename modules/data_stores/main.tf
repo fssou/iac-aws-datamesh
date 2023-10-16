@@ -18,3 +18,7 @@ module "spec" {
 module "athena" {
   source = "./modules/athena"
 }
+
+module "glue" {
+  source = "./modules/glue"
+}

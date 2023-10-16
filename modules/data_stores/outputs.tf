@@ -16,7 +16,9 @@ output "bucket_spec" {
 }
 
 output "athena" {
-  value = {
-    bucket_query_results = module.athena.bucket_query_results
-  }
+  value = module.athena
+}
+
+output "glue" {
+  value = module.glue
 }
