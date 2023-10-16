@@ -15,19 +15,19 @@ resource "aws_glue_catalog_table" "tb_covid_19_data_resource_hub_covid_19_case_c
     "parquet.compression" = "snappy"
   }
   partition_keys {
-    name = "part_report_date"
-    type = "date"
-    comment = "Partition of column report_date"
+    name    = "report_date"
+    type    = "date"
+    comment = "Date of report in YYYY-MM-DD format"
   }
   partition_keys {
-    name = "part_country_alpha_2_code"
-    type = "string"
-    comment = "Partition of column country_alpha_2_code"
+    name    = "country_alpha_2_code"
+    type    = "string"
+    comment = "Country alpha-2 code"
   }
   partition_keys {
-    name = "part_continent_name"
-    type = "string"
-    comment = "Partition of column continent_name"
+    name    = "continent_name"
+    type    = "string"
+    comment = "Continent name"
   }
   storage_descriptor {
     location      = "s3://${var.bucket_name_sor}/${local.data_world_0001_db_name}/${local.data_world_0001_tb_name}"
@@ -56,16 +56,6 @@ resource "aws_glue_catalog_table" "tb_covid_19_data_resource_hub_covid_19_case_c
       comment = "Province or state name"
     }
     columns {
-      name    = "report_date"
-      type    = "date"
-      comment = "Date of report in YYYY-MM-DD format"
-    }
-    columns {
-      name    = "continent_name"
-      type    = "string"
-      comment = "Continent name"
-    }
-    columns {
       name    = "data_source_name"
       type    = "string"
       comment = "Data source name"
@@ -89,11 +79,6 @@ resource "aws_glue_catalog_table" "tb_covid_19_data_resource_hub_covid_19_case_c
       name    = "country_short_name"
       type    = "string"
       comment = "Country short name"
-    }
-    columns {
-      name    = "country_alpha_2_code"
-      type    = "string"
-      comment = "Country alpha-2 code"
     }
     columns {
       name    = "people_positive_new_cases_count"
