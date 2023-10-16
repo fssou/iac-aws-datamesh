@@ -14,3 +14,7 @@ module "sot" {
 module "spec" {
   source = "./modules/spec"
 }
+
+module "athena" {
+  source = "./modules/athena"
+}

@@ -14,3 +14,9 @@ output "bucket_sot" {
 output "bucket_spec" {
   value = module.spec.bucket
 }
+
+output "athena" {
+  value = {
+    bucket_query_results = module.athena.bucket_query_results
+  }
+}
